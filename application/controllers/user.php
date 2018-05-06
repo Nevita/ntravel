@@ -36,4 +36,12 @@ class User extends CI_Controller{
 			echo "<h2>Insert Data Gagal</h2>";
 		}
 	}
+
+	public function do_delete($id){
+		$where = array('id' => $id);
+		$res = $this->mymodel->DeleteData('user',$where);
+		if($res>=1){
+			redirect('user/index');
+		}
+	}
 }

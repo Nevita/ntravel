@@ -22,7 +22,7 @@
 		<td><?php echo $d['level']; ?></td>
 		<td>
 			<a href="">edit</a>
-			<a href="">delete</a>
+			<a href="<?php echo base_url()."index.php/user/do_delete/".$d['id']; ?>">delete</a>
 		</td>
 	</tr>
 <?php } ?>
